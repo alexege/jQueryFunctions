@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- click -->
+    <div class="container">
+        <button id="button-click" class="button">.click</button>
+        <div class="label">
+            <h2>Click</h2>
+            <p id="click-p">Triggers a click event. In this case, it changes this text.</p>
+        </div>
+    </div>
+    
+    <!-- hide -->
+    <div class="container">
+        <button id="button-hide" class="button">.hide</button>
+        <div class="label">
+            <h2>Hide</h2>
+            <p id="hide-p">Click the button to hide this text.</p>
+        </div>
+    </div>
+    
+    <!-- show -->
+    <div class="container">
+        <button id="button-show" class="button">.show</button>
+        <div class="label">
+            <h2>Show</h2>
+            <p class="hidden" id="show-p">Click the button to show the hidden text.</p>
+        </div>
+    </div>
+
+    <!-- toggle -->
+    <div class="container">
+        <button id="button-toggle" class="button">.toggle</button>
+        <div class="label">
+            <h2>Toggle</h2>
+            <p id="toggle-p">Click the button to toggle visibility of this paragraph tag.</p>
+        </div>
+    </div>
+    
+    <!-- slideDown -->
+    <div class="container">
+        <button id="button-slideDown" class="button">.slideDown</button>
+        <div class="label">
+            <h2>slideDown</h2>
+            <p class="hidden" id="slideDown-p">Click the button to animate in the paragraph from above (slideDown).</p>
+        </div>
+    </div>
+    
+    <!-- slideUp -->
+    <div class="container">
+        <button id="button-slideUp" class="button">.slideUp</button>
+        <div class="label">
+            <h2>slideUp</h2>
+            <p id="slideUp-p">Click the button to animate in the paragraph from below (slideUp).</p>
+        </div>
+    </div>
+    
+    <!-- slideToggle -->
+    <div class="container">
+        <button id="button-slideToggle" class="button">.slideToggle</button>
+        <div class="label">
+            <h2>slideToggle</h2>
+            <p id="slideToggle-p">Click the button to toggle a slide animation.</p>
+        </div>
+    </div>
+    
+    <!-- fadeIn -->
+    <div class="container">
+        <button id="button-fadeIn" class="button">.fadeIn</button>
+        <div class="label">
+            <h2>fadeIn</h2>
+            <p class="hidden" id="fadeIn-p">Click the button to first hide and then fade in this text.</p>
+        </div>
+    </div>
+    
+    <!-- fadeOut -->
+    <div class="container">
+        <button id="button-fadeOut" class="button">.fadeOut</button>
+        <div class="label">
+            <h2>fadeOut</h2>
+            <p id="fadeOut-p">Click the button to fade out this text.</p>
+        </div>
+    </div>
+    
+    <!-- addClass -->
+    <div class="container">
+        <button id="button-addClass" class="button">.addClass</button>
+        <div class="label">
+            <h2>addClass</h2>
+            <p id="addClass-p">Click the button to add a class to this paragraph. In this case, a new font family (fantasy).</p>
+        </div>
+    </div>
+    
+    <!-- before -->
+    <div class="container">
+        <button id="button-before" class="button">.before</button>
+        <div class="label">
+            <h2>before</h2>
+            <p id="before-p">Click the button to add an element before your current element.</p>
+        </div>
+    </div>
+    
+    <!-- after -->
+    <div class="container">
+        <button id="button-after" class="button">.after</button>
+        <div class="label">
+            <h2>after</h2>
+            <p id="after-p">Click the button to add an element after your current element.</p>
+        </div>
+    </div>
+    
+    <!-- append -->
+    <div class="container">
+        <button id="button-append" class="button">.append</button>
+        <div class="label">
+            <h2>append</h2>
+            <p id="append-p">Click the button to append a string to your current string.</p>
+        </div>
+    </div>
+    
+    <!-- html -->
+    <div class="container">
+        <button id="button-html" class="button">.html</button>
+        <div class="label">
+            <h2>html</h2>
+            <p id="html-p">Click the button to replace your element's content.</p>
+        </div>
+    </div>
+    
+    <!-- attr -->
+    <div class="container">
+        <button id="button-attr" class="button">.attr</button>
+        <div class="label">
+            <h2>attr</h2>
+            <p id="attr-p">Click the button to change an attribute (image size).</p>
+        </div>
+        <img id="attr-img" src="https://cutecdn.codingdojo.com/images/global/coding_dojo_logo_white_new.png" alt="">
+    </div>
+    
+    <!-- val -->
+    <div class="container">
+        <button id="button-val" class="button">.val</button>
+        <div class="label">
+            <h2>val</h2>
+            <p id="val-p">Click the button to alter a value (input:text).</p>
+            <input type="text" name="example" value="preview"/>
+        </div>
+    </div>
+    
+    <!-- text -->
+    <div class="container">
+        <button id="button-text" class="button">.text</button>
+        <div class="label">
+            <h2>text</h2>
+            <p id="text-p">Click the button to replace a text value.</p>
+        </div>
+    </div>
+
+    <script>
+        // .click
+        $('#button-click').click(function(){
+            $('#click-p').text("Click event triggered.");
+        });
+
+        // .hide
+        $('#button-hide').click(function(){
+            $('#hide-p').hide();
+        });
+
+        // .show
+        $('#button-show').click(function(){
+            $('#show-p').show();
+        });
+        
+        // .toggle
+        $('#button-toggle').click(function(){
+            $('#toggle-p').toggle();
+        });
+
+        // .slideDown
+        $('#button-slideDown').click(function(){
+            $('#slideDown-p').slideDown();
+        });
+        
+        // .slideUp
+        $('#button-slideUp').click(function(){
+            $('#slideUp-p').slideUp();
+        });
+
+        // .slideToggle
+        $('#button-slideToggle').click(function(){
+            $('#slideToggle-p').slideToggle();
+        });
+
+        // fadeIn
+        $('#button-fadeIn').click(function(){
+            $('#fadeIn-p').hide().delay(400);
+            $('#fadeIn-p').fadeIn();
+        });
+
+        // fadeOut
+        $('#button-fadeOut').click(function(){
+            $('#fadeOut-p').fadeOut();
+        });
+
+        // addClass
+        $('#button-addClass').click(function(){
+            $('#addClass-p').addClass('fantasy');
+        });
+        
+        // before
+        $('#button-before').click(function(){
+            $('#before-p').before("<p>You're adding a new element before your element</p>");
+        });
+
+        // after
+        $('#button-after').click(function(){
+            $('#after-p').after("<p>You're adding a new element after your element</p>");
+        });
+
+        // append
+        $('#button-append').click(function(){
+            $('#append-p').append("-You've appended a string to the end of your value.");
+        });
+
+        // html
+        $('#button-html').click(function(){
+            $('#html-p').html("You've changed the content of your p tag");
+        });
+
+        // attr
+        $('#button-attr').click(function(){
+            $('#attr-img').attr("width", "50");
+        });
+
+        // val
+        $('#button-val').click(function(){
+            $('input:text').val("new val");
+        });
+
+        // text
+        $('#button-text').click(function(){
+            $('#text-p').text("This is our new text.");
+        });
+
+    </script>
+</body>
+</html>
